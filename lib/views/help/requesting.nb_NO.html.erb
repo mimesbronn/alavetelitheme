@@ -1,0 +1,226 @@
+<% @title = "Lag henvendelse" %>
+
+<%= render :partial => 'sidebar' %>
+<div id="left_column_flip">
+
+<h1 id="making_requests"><%= @title %> <a href="#making_requests">#</a> </h1>
+<dl>
+
+<dt id="which_authority">Jeg er usikker på hvilken myndighet jeg skal sende henvendelsen til, hvordan kan jeg finne riktig myndighet? <a href="#which_authority">#</a> </dt>
+
+<dd>
+<p>Det kan være vanskelig å få oversikt over myndighetenes kompliserte struktur, og finne ut hvem som har informasjonen du vil ha. Her er noen tips:
+<ul>
+<li>Titt litt rundt eller søk <%= site_name %> for å se etter lignendende henvendelser som din.</li>
+<li>Når du tror du har funnet en myndighet som kan ha informasjonen, bruk "hjemmeside" lenka til høyre på siden deres for å sjekke websiden om hva de holder på med.</li>
+<li>Kontakt myndighetene på e-post eller telefon for å spørre om de har den typen informasjon du ønsker.</li>
+<li>Ikke bekymre deg om du sender til korrekt myndighet. Om du sender feil, plikter de å hjelpe deg i riktig retning.
+</li>
+<li>Om du har en kinkig sak, <a href="/help/contact">kontakt oss</a> så skal vi forsøke å hjelpe.</li>
+</ul>
+
+</dd>
+
+<dt id="missing_body">Dere mangler den myndigheten jeg ønsker å spørre! <a href="#missing_body">#</a> </dt>
+
+<dd>
+<p>Vennligst <a href="/help/contact">kontakt oss</a> med navnet på myndigheten og, om du finner det, deres kontakt e-post adresse for innsynsbegjæringer.
+</p>
+
+</dd>
+<!--
+<dt id="authorities">Why do you include some authorities that aren't formally subject to FOI?<a href="#authorities">#</a> </dt>
+
+<dd>
+<p><%= site_name %> lets you make requests for information to a range of
+organisations:</p>
+
+<ul>
+  <li> Those formally subject to the FOI Act</li>
+  <li> Those formally subject to the Environmental Regulations (a less well  
+  defined group)</li>
+  <li> Those which voluntarily comply with the FOI Act</li>
+  <li> Those which aren't subject to the Act but we think should be, on grounds
+  such as them having significant public responsibilities. 
+  </li>
+</ul>
+
+<p>In the last case, we're using the site to lobby for expansion of the
+scope of the FOI Act. Even if an organisation is not legally obliged to respond
+to an FOI request, they can still do so voluntarily.
+</p>
+
+</dd>
+-->
+
+<dt id="focused">Hvorfor må jeg holde henvendelsene fokusert?<a href="#focused">#</a> </dt>
+
+<dd>
+
+<p>Bare skriv ting i forespørselen som er nødvendig for at noen enkelt kan identifisere informasjonen du søker. Vær spesifikk og fokusert! <i>Ikke</i> inkluder:</p>
+
+<ul>
+<li>argumentasjon for saken din</li>
+<li>utsagn som kan være krenkende eller fornærmende for andre</li>
+</ul>
+
+<p>Om du gjør dette, må vi fjerne henvendelsen din for å forhindre problemer med lovene. Dette er kjedelig både for oss og deg. Korte meldinger gjør det letter for myndigheten å finne hvilken informasjon du ønsker, som betyr at du raskere får svar.
+</p>
+
+<p>Om du søker informasjon for å støtte et argument eller kampanje, Offentlighetslova er et kraftig verktøy. Selv om du ikke kan bruke denne tjenesten for å drive kampanjen din, så oppfordrer vi deg til å bruke den for å skaffe informasjonen du trenger. Vi oppfordrer deg også til å kjøre kampanjen et annet sted. En effektiv og veldig enkel muligheter er å <%= link_to 'starte din egen blogg',
+"http://wordpress.com/"%>. Du er velkommen til å linke til kampanjen din fra denne nettsiden i en kommentar til henvendelsen (du kan skrive inn kommentarer etter at du har sendt henvendelsen).
+</p>
+
+</dd>
+
+<dt id="fees">Koster det noe å lage en henvendelse?<a href="#fees">#</a> </dt>
+
+<dd>
+<p>En innsynhenvendelse er som regel alltid gratis.</p>
+</dd>
+
+
+
+<dt id="quickly_response">Hvor raskt vil jeg få svaret? <a href="#quickly_response">#</a> </dt>
+
+<dd>
+<p>Etter loven, skal myndighetene behandle saken <strong>uten opphold</strong>.
+</p>
+
+<p>De skal normalt svare innen 2-3 dager, og i de fleste tilfeller innen 5 dager. Har de en grunn for å ikke svare innen denne tiden må de opplyse om dette. (<a href="/help/officers#days">alle detaljer</a>).
+
+<p><%= site_name %> vil sende deg en e-post om du ikke får svaret innen rimelig tid. Deretter kan du velge om du vil sende de en purre-melding, og fortelle at de bryter loven.</p>
+
+</dd>
+
+<dt id="no_response">Hva om jeg aldri får et svar?<a href="#no_response">#</a> </dt>
+
+<dd>
+<p>Det er flere ting du kan gjøre om de ikke svarer</p>
+<ul>
+    <li>Noe kan ha godt galt, og myndigheten har ikke fått henvendelsen din. Det er verdt å ringe myndigheten og høflig sjekke at de har mottatt henvendelsen. Den ble sendt til de på e-post.
+    </li>
+    <li>Om de ikke har mottatt den, kan det skyldes et "spam filter". Henvis myndighetene til svaret
+    '<a href="/help/officers#spam_problems">Jeg kan se henvendelsen på <%= site_name %>, men vi fikk aldri e-posten!</a>' 
+    i saksbehandler seksjonen på disse hjelpsidene. 
+    </li>
+    <li>Om du fortsatt ikke har noe hell, så kan du klage til myndighetene. Det er også mulig å klage til Sivilombudsmannen. Les siden var '<a href="/help/unhappy">Utilfreds med svaret du fikk?</a>'.
+</ul>
+</dd>
+
+<dt id="not_satifised">Hva om jeg ikke er fornøyd med svaret? <a href="#not_satifised">#</a> </dt>
+<dd>Om du ikke fikk informasjonen du spurte om, eller om du ikke fikk den i tide, les vår side:'<a href="/help/unhappy">Utilfreds med svaret du fikk?</a>'.
+</dd>
+<!--
+<dt id="reuse">Det står at jeg ikke kan gjennbruke informasjonen jeg fikk!<a href="#reuse">#</a> </dt>
+<dd>
+<p>Authorities often add legal boilerplate about the 
+"<a href="http://www.opsi.gov.uk/si/si2005/20051515">Re-Use of Public Sector
+Information Regulations 2005</a>", which at first glance implies you may not
+be able do anything with the information.
+</p>
+
+<p>You can, of course, write articles about the information or summarise it, or
+quote parts of it. We also think you should feel free to republish the
+information in full, just as we do, even though in theory you might not be
+allowed to do so.  See <a href="/help/officers#copyright">our policy on copyright</a>.</p>
+
+</dd>
+-->
+<!--
+<dt id="ico_help">Can you tell me more of the nitty gritty about the process of making requests? <a href="#ico_help">#</a> </dt>
+
+<dd>
+<p>Have a look at the
+<a href="http://www.ico.gov.uk/for_the_public/access_to_official_information.aspx">access to official information</a>
+pages on the Information Commissioner's website.</p>
+
+<p>If you're requesting information from a Scottish public authority,
+the process is very similar. There are differences around time
+limits for compliance.
+See the <a href="http://www.itspublicknowledge.info/nmsruntime/saveasdialog.asp?lID=1858&amp;sID=321">Scottish
+Information Commissioner's guidance</a> for details.</p> 
+</dd>
+-->
+<dt id="data_protection">Kan jeg be om informasjon om meg personlig? <a href="#data_protection">#</a> </dt>
+
+<dd>
+<p>Nei. Hendendelser gjort med <%= site_name %> er offentlige, og behandles etter Offentlighetslova. Vi kan ikke hjelpe deg med personlige hendendelser.</p>
+
+<p>Om du vil vite hva slags informasjon en myndighet har registrert om deg, kan du be om dette etter Personopplysningsloven. Du finner mer informasjon om <a href="http://snl.no/innsynsrett">innsynsrettene</a> dine på SNL.</p>
+
+<p>Forvaltningen har dessuten taushetsplikt på dine personopplysninger, og hverken vi eller myndighetene ønsker å publisere dette.</p>
+
+<p>
+
+<p>Om du ser at noen har inkludert personopplysninger, kanskje  uforvarende, i en henvendelse, vennligst <a href="/help/contact">kontakt oss</a> umiddelbart slik at vi kan fjerne det.</p>
+</dd>
+
+
+<dt id="private_requests">Jeg ønsker å holde henvendelsene mine hemmlige (I hvert fall til jeg publiserer saken min) <a href="#private_requests">#</a> </dt>
+
+<dd><p><%= site_name %> er foreløpig kun designet for offentlige henvendelser. Alle henvendelser vil bli automatisk publisert slik at alle kan lese de. </p>
+<p>Du bør kontaktene myndighetene direkte. <a href="/help/contact">Ta kontakt</a>, om du er interessert i å kjøpe et system som hjelper med å håndtere innsynshenvendelser.
+</p>
+</dd>
+<!--
+<dt id="eir">Why can I only request information about the environment from some authorities? <a href="#eir">#</a> </dt>
+
+<dd>
+<p>Some public authorities, such as <a href="http://www.whatdotheyknow.com/body/south_east_water">South East Water</a>,
+don't come under the Freedom of Information Act, but do come under another law called
+the Environmental Information Regulations (EIR). 
+</p>
+
+<p>It's a very similar law, so you make a request
+to them using <%= site_name %> in just the same way as an FOI request. The only
+difference is that on the page where your write you request, it reminds you
+that you can only request "environmental information" and tells you what that
+means. It is quite broad.
+</p>
+
+<p>You can, of course, request environmental information from other
+authorities. Just make a Freedom of Information (FOI) request as normal. The
+authority has a duty to work out if the Environmental Information Regulations
+(EIR) is the more appropriate legislation to reply under. 
+</p>
+</dd>
+
+<dt id="multiple">Can I make the same to request to lots of authorities, e.g. all councils? <a href="#multiple">#</a> </dt>
+
+<dd>We ask you to first send a test version of your request to a few
+authorities. Their responses will help you improve the wording of your request,
+so that you get the best information when you send the request to all of
+the authorities. There is currently no automated system for sending the request
+to the other authorities, you must copy and paste it by hand.
+
+</dd>
+
+<dt id="offsite">I made a request off the site, how do I upload it to the archive?<a href="#offsite">#</a> </dt>
+
+<dd><%= site_name %> is an archive of requests made through the site,
+and does not try to be an archive of all FOI requests. We'll never support uploading
+other requests. For one thing, we wouldn't be able to verify that other
+responses actually came from the authority. If this really matters to you,
+you can always make the same request again via <%= site_name %>.
+</dd>
+
+<dt id="moderation">How do you moderate request annotations? <a href="#moderation">#</a> </dt>
+
+<dd> 
+<p>Annotations on <%= site_name %> are to help
+people get the information they want, or to give them pointers to places they
+can go to help them act on it. We reserve the right to remove anything else.
+</p>
+<p>Endless, political discussions are not allowed.
+Post a link to a suitable forum or campaign site elsewhere.</p>
+<dd>
+-->
+
+</dl>
+
+<p><strong>Next</strong>, read about <a href="/help/privacy">your privacy</a> --&gt;
+
+<div id="hash_link_padding"></div>
+
+</div>

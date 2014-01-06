@@ -1,0 +1,91 @@
+<% @title = "Kontakt oss" %>
+
+<%= foi_error_messages_for :contact %>
+
+<h1><%= @title %></h1>
+
+<div id="contact_preamble">
+
+    <% if !flash[:notice] %>
+        <h2>Kontakt en myndighet for å få offentlig informasjon</h2>
+        <ul>
+            <li><a href="<%= new_request_path %>">Gå hit</a> for å lage en henvendelse, i offentligheten, for informasjon fra en myndighet.</li>
+
+            <li>
+            Spør du om dine egne personlige saker? Vennligst les vår 
+            <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">hjelpeside</a>.
+            </li>
+        </ul>
+
+    <% end %>
+
+    <h2>Kontakt menneskene bak <%= site_name %></h2>
+    <% if !flash[:notice] %>
+            <ul>
+            <li>
+            Fint om du leser  <a href="<%= help_about_path %>">hjelpesidene</a> først, kanskje er raskere å finne svaret der.
+            </li>
+
+            <li>Vi setter stor pris på tilbakemmeldinger for å høre hva du syntes om denne tjenesten. Du kan enten fylle ut skjema nedenfor, eller sende e-post til <a
+               href="mailto:<%=@contact_email%>"><%=@contact_email%></a>
+            </li>
+
+            <li>Vi er en <strong> frivllig organisasjon </strong> og ikke en offentlig myndighet.</li>
+            </ul>
+    <% end %>
+</div>
+
+<%= form_for :contact do |f| %>
+
+    <% if not @user %>
+        <p>
+            <label class="form_label" for="contact_name">Ditt navn:</label>
+            <%= f.text_field :name, :size => 20 %>
+            (eller <%= link_to "logg inn", signin_path(:r => request.fullpath) %>)
+        </p>
+
+        <p>
+            <label class="form_label" for="contact_email">Din e-post:</label>
+            <%= f.text_field :email, :size => 20 %>
+        </p>
+    <% end %>
+
+    <p>
+        <label class="form_label" for="contact_subject">Tittel:</label>
+        <%= f.text_field :subject, :size => 50 %>
+    </p>
+
+    <p>
+        <label class="form_label" for="contact_message">Melding til tjenesten:</label>
+        <%= f.text_area :message, :rows => 10, :cols => 60 %>
+    </p>
+
+    <% if !@last_request.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Inkluder lenke til henvendelse:/label>
+            <%=request_link(@last_request) %>
+            <%= submit_tag "remove", :name => 'fjern' %>
+        </p>
+    <% end %>
+    <% if !@last_body.nil? %>
+        <p>
+            <label class="form_label" for="contact_message">Inkluder lenke til myndigheten:</label>
+            <%=public_body_link(@last_body) %>
+            <%= submit_tag "remove", :name => 'fjern' %>
+        </p>
+    <% end %>
+
+    <p class="form_note">
+    Vi kan bare hjelpe deg med  <strong>tekniske problemer</strong>, ellers spørsmål om innsyn.
+    </P>
+
+
+    <div class="form_button">
+        <%= hidden_field_tag(:submitted_contact_form, 1) %>
+        <%= submit_tag "Send meldingen til oss" %>
+        &lt;-- det er vi som driver denne tjenesten. ikke myndighetene!
+    </div>
+
+<% end %>
+
+
