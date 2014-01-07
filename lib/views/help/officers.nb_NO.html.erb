@@ -7,14 +7,14 @@
 
   <dl>
 
-  <dt id="top">Jeg kom hit ved å følge lenka nederst i en innsynsbegjæring, hva skjer? <a href="#top">#</a> </dt>
+  <dt id="top">Jeg kom hit ved å følge lenka nederst i en innsynsbegjæring, hva skjer her? <a href="#top">#</a> </dt>
 
-  <dd><p><%= site_name %> er en tjeneste som driftes av frivillige. Den hjelper vanlige innbyggere å lage innsynsbegjæringer, og å følge med på og dele svaret.</p>
+  <dd><p><%= site_name %> er en tjeneste som driftes av frivillige. Den hjelper vanlige innbyggere å lage innsynsbegjæringer, og abonnere og dele svarene. </p>
 
-  <p>Innsynsbegjæringen du fikk ble sendt av noen ved hjelp av <%= site_name %>. Det er enkelt for deg å svare på henvendelsen, akkuratt som du ville gjort med enhver annen henvendelse fra en person. Den eneste forskjelligen er at svaret blir publisert på Internettet automatisk.
+  <p>Innsynsbegjæringen du fikk ble sendt av noen ved hjelp av <%= site_name %>. Det er enkelt for deg å svare på henvendelsen, akkurat som du ville gjort med enhver annen henvendelse fra en person. Den eneste forskjellen er at svaret blir publisert på Internettet automatisk.
   </p>
   <p>Om du har personvern- eller andre bekymringer, vennligst les svarene nedenfor. Du vil kanskje også lese dette <a
-  href="<%= help_about_path %>">introduksjon til <%= site_name %></a>for å finne ut hvordan tjenesten fungerer sett fra en brukes synsvinkel. Du kan også søke på tjeensten for å finne myndigheten du jobber for, og se status på alle henvendelser som er utført ved hjelp av dette nettstedet.
+  href="<%= help_about_path %>">introduksjon til <%= site_name %></a>for å finne ut hvordan tjenesten fungerer sett fra en brukes synsvinkel. Du kan også søke på tjenesten for å finne myndigheten du jobber for, og se status på alle henvendelser som er utført ved hjelp av dette nettstedet.
 
   <p>Sist, vi setter pris på kommentarer og tanker fra saksbehandlere, det er fint om du lar <a href="<%= help_contact_path %>">hører fra deg</a>.
   </p>
@@ -22,7 +22,7 @@
 
   <dt id="responses">Hvorfor publiserer dere svarene fra innsynsbegjæringene? <a href="#responses">#</a> </dt>
 
-  <dd>Vi mener det er flere gode grunner for det. Det viktigste er at det vil oppfordre befolkningen til å interessere seg mer og involvere seg i statens virksomhet. Vi håper det også vil redusere antall dupliserte henvendelser på alle tema som den offentlige mynidgheten mottar. Siden innsynshenvendelsene inneholder offentlig informasjon, som alle enkelt kan be om igjen, ser vi ingen grunner for ikke å spre informasjonen.
+  <dd>Vi mener det er flere gode grunner for det. Det viktigste er at det vil oppfordre befolkningen til å interessere seg mer og involvere seg i statens virksomhet. Vi håper det også vil redusere antall dupliserte henvendelser på alle tema som den offentlige myndigheten mottar. Siden innsynshenvendelsene inneholder offentlig informasjon, som alle enkelt kan be om igjen, ser vi ingen grunner for ikke å spre informasjonen.
   </dd>
 
   <dt id="realpeople">Er menneskene som lager henvendelsene virkelig mennesker? <a href="#realpeople">#</a> </dt>
@@ -36,8 +36,9 @@
   <a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives guidance on the matter, specifically
   in the context of requests made via WhatDoTheyKnow.
   </dd>
-
-  <dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
+-->
+<!-- Om dette skulle bli et problem får vi legge til noe i FAQ 
+ <dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
 
   <dd><p>WhatDoTheyKnow is not making any requests. We are sending requests on
   behalf of our users, who are real people making the requests. </p>
@@ -50,38 +51,34 @@
   <a href="http://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives some guidance on the matter.</p>
   </dd>
 -->
-  <dt id="spam_problems">Jeg kan se en henvendelse på <= site_name %>, men vi fikk den aldri på epost!<a href="#spam_problems">#</a> </dt>
+
+  <dt id="spam_problems">Jeg kan se en henvendelse på <%= site_name %>, men vi fikk den aldri på epost!<a href="#spam_problems">#</a> </dt>
   <dd><p>Hvis en henvendelse vises på sidene, har vi forsøkt å sende den til myndigheten på epost. Leveransefeil vil på eposten vil automatisk vises på sidene. Du kan selv sjekke hvilken epost adresse vi benytter ved å benytte "Vis e-post adresse for innsyn" lenken som vises på siden til myndigheten. <a href="<%= help_contact_path %>">Kontakt oss</a> om du har en bedre adresse vi kan bruke.</p>
   <p>Henvendelsen kommer noen ganger ikke frem fordi de blir fjernet i stillhet av "spam filtrene" i IKT-avdelingen til organisasjonen. Myndighetene kan sikre seg mot at dette ikke skjer ved å be IKT "hvitliste" alle eposter fra <strong>@mimesbronn.no</strong>.
   Om du <a href="<%= help_contact_path %>">spør oss</a> vil vi videresende alle henvendelser, og/eller gi tekniske detaljer slik at IKT kan finne ut hvor det ble av meldingen.
   </p>
 
-  <p>Til slutt, du kan også svare på henvendelser fra nettleseren din, uten å bruke epost, ved å benytte "respond to request TODO" lenke nederst på siden til henvendelsen.</p>
+  <p>Til slutt, du kan også svare på henvendelser fra nettleseren din, uten å bruke epost, ved å benytte "Svar på henvendelsen" lenke nederst på siden til henvendelsen.</p>
   </dd>
 
-  <dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
+
+  <dt id="days">Hvordan regner dere ut svarfristen som vises på sidene?<a href="#days">#</a> </dt>
 
   <dd>
+  <p>Offentlighetslova sier:</p>
+
+  <blockquote><p>Eit organ som mottek eit innsynskrav, skal vurdere kravet konkret og sjølvstendig. Kravet skal avgjerast utan ugrunna opphald.</p></blockquote>
   <p>The Freedom of Information Act says:</p>
 
-  <blockquote><p>A public authority must comply with section 1(1) <strong>promptly</strong> and
-  in any event not later than the twentieth working day following the date of
-  receipt.</p></blockquote>
+  <p>Detaljene rundt hvordan vi regner ut dagene, og om når på døgnet henvendelsen kom m.m. er ikke viktig, det som er viktig her er at loven sier at myndighetene skal <strong>svare raskt</strong>.</p>
 
-  <p>The nerdy detail of exactly how weekends are counted, and what happens if
-  the request arrives out of office hours, is just that - detail. What matters
-  here is that the law says authorities must respond <strong>promptly</strong>.</p>
+  <p>Om du har en god grunn for hvorfor henvendelsen kommer til å ta litt tid å behandle, vil innsynsbegjærer sette stor pris på at du raskt svarer med en setning om hva som skjer.</p>
 
-  <p>If you've got a good reason why the request is going to take a while to
-  process, requesters find it really helpful if you can send a quick email with a
-  sentence or two saying what is happening. </p>
-
-  <p>FOI officers often have to do a lot of <strong>hard work</strong> to answer
-  requests, and this is hidden from the public. We think it would help everyone
-  to have more of that complexity visible.</p>
-
+  <p>Saksbehandlere har ofte mange saker å behandler, og det er vårt inntrykk at det ofte legges mye <strong>hardt arbeid</strong> i å svare på henvendelser. Dette arbeidet er ofte skjult for offentligheten. Vi tror det vil hjelpe alle om mer av denne kompleksiteten blir synlig.</p>
   </dd>
 
+
+<!-- TODO: dette er et godt spørsmål men en jurist må se på det
   <dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
 
   <dd>
@@ -133,7 +130,9 @@
   <strong>promptly</strong>. That's really what matters.</p>
 
   </dd>
+-->
 
+<!-- TODO: ikke relevant for Norge?
   <dt id="public_interest_test">How do you reflect time extensions for public interest tests?<a href="#public_interest_test">#</a> </dt>
 
   <dd>
@@ -178,28 +177,18 @@
   to be public information. We will only remove content in exceptional
   circumstances, see our <a href="<%= help_privacy_path(:anchor => 'takedown') %>">take down policy</a>.
   </dd>
+-->
+  <dt id="mobiles">Publiserer dere epost adresser og mobil nummer? <a href="#mobiles">#</a> </dt>
 
-  <dt id="mobiles">Do you publish email addresses or mobile phone numbers? <a href="#mobiles">#</a> </dt>
-
-  <dd><p>To prevent spam, we automatically remove most emails and some mobile numbers from
-  responses to requests.  Please <a href="<%= help_contact_path %>">contact us</a> if we've
-  missed one.
-  For technical reasons we don't always remove them from attachments, such as certain PDFs.</p>
-  <p>If you need to know what an address was that we've removed, please <a
-    href="<%= help_contact_path %>">get in touch with us</a>. Occasionally, an email address
-  forms an important part of a response and we will post it up in an obscured
-  form in an annotation.
+  <dd><p>For å forhindre spam, vil vi automatisk fjerne de fleste epostadresser og noen mobil numnere. Vennligst <a href="<%= help_contact_path %>">kontakt oss</a> om det er noen vi har bommet på.
+  Av tekniske grunner klarer vi ikke å fjerne de fra alle vedlegg, for eksempel noen PDF-filer. </p>
+  <p>Om du trenger en av epostadressene vi har fjernet, vennligst <a href="<&= help_contact_path %">hør med oss</a>a>. Fra tid til annnen utgjørt en epostadresse en viktig del av svaret på innsynsbegjæringen og vi vil da legge inn en obskure versjon som en kommentar.
+  </p>
   </dd>
 
-  <dt id="copyright"><a id="commercial"></a>What is your policy on copyright of documents?<a href="#copyright">#</a> </dt>
+  <dt id="copyright"><a id="commercial"></a>Hva er politikken deres på opphavsrett?<a href="#copyright">#</a> </dt>
 
-  <dd>Our Freedom of Information law is "applicant blind", so anyone in the
-  world can request the same document and get a copy of it.
-
-  If you think our making a document available on the internet infringes your
-  copyright, you may <a href="<%= help_contact_path %>">contact us</a> and ask us
-  to take it down.  However, to save tax payers' money by preventing duplicate
-  requests, and for good public relations, we'd advise you not to do that.
+  <dd>Offentlighetslova skiller ikke mellom henvendelser, og alle i hele verden kan spørre etter dokumenter og få kopi av disse. Om du tror at vi deler dokumenter som bryter med opphavsretten din, kan du <a href="<%= help_contact_path %>">kontakte oss</a> og spørre om vi kan fjerne de. Allikevel, for å spare skattepenger og hindre negativ PR, anbefaler vi at du ikke gjør dette.
   </dd>
 
   </dl>
