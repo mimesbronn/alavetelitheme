@@ -258,8 +258,14 @@ color:#6B3C7F;
 
 div.controller_help h1 a,#logged_in_bar a,#logged_in_bar a:visited,#stepwise_make_request strong {
 color:#93278F;
+
+div.controller_help h1 a {
+color:#487890;
 }
 
+#stepwise_make_request strong  {
+color: #000;
+}
 
 body.front {
 background:image-url('home-grad.png') repeat-x 0 160px;
@@ -271,4 +277,8 @@ background:image-url('quote-marks.png') no-repeat;
 
 #frontpage_examples .excerpt {
 background:image-url('quote-marks.png') no-repeat;
+}
+
+.admin .navbar-static-top .container, .admin .navbar-fixed-top .container, .admin .navbar-fixed-bottom .container {
+  width: auto;
 }
