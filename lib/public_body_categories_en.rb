@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # The PublicBodyCategories structure works like this:
 # [
 #   "Main category name",
@@ -17,7 +18,7 @@ PublicBodyCategories.add(:en, [
 
 PublicBodyCategories.add(:nb_NO, [
     "Populare myndigheter",
-        [ "popular_agency", "Populære instanser", "a lonely agency"],
+        [ "popular_agency", "Populære instanser", "en myndighet"],
     "Utøvende makt",
         [ "27", "Departementene", "et departement" ],
         [ "33", "Direktorat og tilsyn", "et direktorat eller tilsyn"],
