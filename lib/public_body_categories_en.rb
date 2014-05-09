@@ -16,21 +16,23 @@ PublicBodyCategories.add(:en, [
         [ "popular_agency", "Popular agencies", "a lonely agency"]
 ])
 
+# 12,14,17,18,27,33,38,66,68,76
 PublicBodyCategories.add(:nb_NO, [
     "Populare myndigheter",
         [ "popular_agency", "Populære instanser", "en myndighet"],
+    "Stortinget",
+        [ "12", "Stortinget", "Stortinget" ],
+        [ "14", "Stortinget - Etater og ombud", "en etat eller ombud" ],
     "Utøvende makt",
         [ "27", "Departementene", "et departement" ],
         [ "33", "Direktorat og tilsyn", "et direktorat eller tilsyn"],
         [ "38", "Andre sentrale enheter direkte underlagt dep.", "en sentral enhet underlagt departement"],
-        [ "39", "Andre regionale og lokale enheter underlagt dep.", "en regional eller lokal enhet underlagt departement"],
-        [ "37", "Lokale direktoratsenheter", "en lokal direktoratsenhet"],
-        [ "36", "Regionale direktoratsenheter", "en regional direktoratsenhet"],
+#        [ "39", "Andre regionale og lokale enheter underlagt dep.", "en regional eller lokal enhet underlagt departement"],
         [ "76", "Ambassader og utenriksstasjoner", "en ambassade eller utenriksstasjon"],
         [ "68", "Andre statlige instanser", "en statlig instans"],
     "Kommuner",
         [ "66", "Kommunene", "en kommune"],
-        [ "73", "Kommunale driftsenheter", "en kommunal driftsenhet"],
-    "Dømmende makt",
-        [ "19", "Tingrettene og byfogdembetene", "en tingrett eller byfodgembetene"],
+    "Domstolene",
+        [ "17", "Høyesterett", "Høyesterett"],
+        [ "18", "Lagsmanrettene", "en lagmansrett"],
 ])
