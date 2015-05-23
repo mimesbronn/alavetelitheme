@@ -27,7 +27,7 @@
 
   <dt id="realpeople">Er menneskene som lager henvendelsene virkelig mennesker? <a href="#realpeople">#</a> </dt>
 
-  <dd>Ja. For at vi skal kunne holde orden på svarene, bruker vi data-genererte e-epost adresser for hver henvendelse. Men hver bruker må registrere seg på tjenesten med en unik e-post adresse som vi verifiserer. Du kan søke på siden for å finne en liste over alle innsynshenvendelser en person har utført.
+  <dd>Ja. For at vi skal kunne holde orden på svarene, bruker vi data-genererte e-epostadresser for hver henvendelse. Men hver bruker må registrere seg på tjenesten med en unik e-postadresse som vi verifiserer. Du kan søke på siden for å finne en liste over alle innsynshenvendelser en person har utført.
   </dd>
 
   <!--<dt id="email_only">An email isn't a sufficient address for an FOI request! <a href="#email_only">#</a> </dt>
@@ -53,12 +53,15 @@
 -->
 
   <dt id="spam_problems">Jeg kan se en henvendelse på <%= site_name %>, men vi fikk den aldri på epost!<a href="#spam_problems">#</a> </dt>
-  <dd><p>Hvis en henvendelse vises på sidene, har vi forsøkt å sende den til myndigheten på epost. Leveransefeil vil på e-posten vil automatisk vises på sidene. Du kan selv sjekke hvilken epost adresse vi benytter ved å benytte «Vis e-post adresse for innsyn» lenken som vises på siden til myndigheten. <a href="<%= help_contact_path %>">Kontakt oss</a> om du har en bedre adresse vi kan bruke.</p>
-  <p>Henvendelsen kommer noen ganger ikke frem fordi de blir fjernet i stillhet av "spam-filtrene" i IKT-avdelingen til organisasjonen. Myndighetene kan sikre seg mot at dette ikke skjer ved å be IKT «hvitliste» alle eposter fra <strong>@mimesbronn.no</strong>.
+  <dd><p>Hvis en henvendelse vises på sidene, har vi forsøkt å sende den til myndigheten på epost. Leveransefeil vil på e-posten vil automatisk vises på sidene. Du kan selv sjekke hvilken epostadresse vi benytter ved å benytte «Vis e-postadresse for innsyn» lenken som vises på siden til myndigheten. <a href="<%= help_contact_path %>">Kontakt oss</a> om du har en bedre adresse vi kan bruke.</p>
+  <p>Henvendelsen kommer noen ganger ikke frem fordi de blir fjernet i stillhet av "spam-filtrene" i IKT-avdelingen til organisasjonen. Myndighetene kan sikre seg at dette ikke skjer ved å be IKT «hvitliste» alle eposter fra <strong>@mimesbronn.no</strong>.
   Om du <a href="<%= help_contact_path %>">spør oss</a> vil vi videresende alle henvendelser, og/eller gi tekniske detaljer slik at IKT kan finne ut hvor det ble av meldingen.
   </p>
 
-  <p>Til slutt, du kan også svare på henvendelser fra nettleseren din, uten å bruke epost, ved å benytte «Svar på henvendelsen» lenke nederst på siden til henvendelsen.</p>
+  <p>Til slutt, du kan også svare på henvendelser fra nettleseren din,
+  uten å bruke epost, ved å benytte lenken «Svar på henvendelsen»
+  nederst på siden til henvendelsen.</p>
+
   </dd>
 
 
@@ -68,7 +71,6 @@
   <p>Offentlighetslova sier:</p>
 
   <blockquote><p>Eit organ som mottek eit innsynskrav, skal vurdere kravet konkret og sjølvstendig. Kravet skal avgjerast utan ugrunna opphald.</p></blockquote>
-  <p>The Freedom of Information Act says:</p>
 
   <p>Detaljene rundt hvordan vi regner ut dagene, og om når på døgnet henvendelsen kom m.m. er ikke viktig, det som er viktig her er at loven sier at myndighetene skal <strong>svare raskt</strong>.</p>
 
@@ -178,11 +180,11 @@
   circumstances, see our <a href="<%= help_privacy_path(:anchor => 'takedown') %>">take down policy</a>.
   </dd>
 -->
-  <dt id="mobiles">Publiserer dere epost adresser og mobil nummer? <a href="#mobiles">#</a> </dt>
+  <dt id="mobiles">Publiserer dere epostadresser og mobil nummer? <a href="#mobiles">#</a> </dt>
 
   <dd><p>For å forhindre spam, vil vi automatisk fjerne de fleste epostadresser og noen mobilnummer. Vennligst <a href="<%= help_contact_path %>">kontakt oss</a> om det er noen vi har bommet på.
   Av tekniske grunner klarer vi ikke å fjerne de fra alle vedlegg, for eksempel noen PDF-filer. </p>
-  <p>Om du trenger en av epostadressene vi har fjernet, vennligst <a href="<&= help_contact_path %">hør med oss</a>a>. Fra tid til annen utgjør en epostadresse en viktig del av svaret på innsynsbegjæringen og vi vil da legge inn en obskure versjon som en kommentar.
+  <p>Om du trenger en av epostadressene vi har fjernet, vennligst <a href="<%= help_contact_path %>">hør med oss</a>. Fra tid til annen utgjør en epostadresse en viktig del av svaret på innsynsbegjæringen og vi vil da legge inn en obfuskert versjon som en kommentar.
   </p>
   </dd>
 
@@ -192,7 +194,7 @@
   </dd>
 
   </dl>
-  <p><strong>Hvis du ikke allerede< har gjort det</strong>, les <a href="<%= help_about_path %>">introduksjonen</a> --&gt;
+  <p><strong>Hvis du ikke allerede har gjort det</strong>, les <a href="<%= help_about_path %>">introduksjonen</a> --&gt;
   <br><strong>Ellers</strong>, <a href="<%= help_credits_path %>">hvem står bak</a> eller <a href="<%= help_api_path %>">programmerings-APIet</a> --&gt;
 
   <div id="hash_link_padding"></div>
