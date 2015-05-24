@@ -7,13 +7,12 @@
 <div id="contact_preamble">
 
     <% if !flash[:notice] %>
-        <h2>Kontakt en myndighet for å få offentlig informasjon</h2>
+        <h2>Kontakt en myndighet for å motta offentlig informasjon</h2>
         <ul>
-            <li><a href="<%= new_request_path %>">Gå hit</a> for å lage en henvendelse, i offentligheten, for informasjon fra en myndighet.</li>
+            <li><a href="<%= new_request_path %>">Klikk her</a> for å lage en henvendelse, i offentligheten, for informasjon fra en myndighet.</li>
 
             <li>
-            Spør du om dine egne personlige saker? Vennligst les vår 
-            <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">hjelpeside</a>.
+            Skal du spørre om personlige saker? Les vår <a href="<%= help_requesting_path(:anchor => 'data_protection') %>">hjelpeside om dette tema først!</a>.
             </li>
         </ul>
 
@@ -87,5 +86,3 @@
     </div>
 
 <% end %>
-
-
