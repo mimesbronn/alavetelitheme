@@ -94,7 +94,8 @@
             <!-- <h3><%= _('What are you doing?') %></h3> -->
 
                 <% if !@outgoing_message.errors[:what_doing_dummy].nil? %>
-                    <div class="fieldWithErrors">
+                    <!--<div class="fieldWithErrors"> -->
+                    <div>		  
                 <% else %>
                     <div>
                 <% end %>
@@ -112,7 +113,9 @@
                         </label>
                     </div>
 		    -->
-                    <div>
+		    <!-- hiding this form away since its default, 
+			 quick hack to remove the feature -->
+                    <div style="display: none">
                         <%= radio_button "outgoing_message", "what_doing", "normal_sort", :id => "sort_normal", :checked => true %>
                         <label for="sort_normal"><%= _('<strong>Anything else</strong>, such as clarifying, prompting, thanking') %></label>
                     </div>
