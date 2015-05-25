@@ -325,3 +325,7 @@ text-align:left;
 #authority_preview {
   background-color: #eee;
 }
+
+.admin .navbar-static-top .container, .admin .navbar-fixed-top .container, .admin .navbar-fixed-bottom .container {
+  width: auto;
+}
