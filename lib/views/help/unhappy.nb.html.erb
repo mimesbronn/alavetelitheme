@@ -52,15 +52,15 @@ du klage til Kongen i statsråd eller Sivilombudsmannen. Det er best om
 du da skriver ut hele henvendelsen og sender dette på papir med alle
 vedlegg.</p>
 
-<p>To make it easier to send the relevant information to the
-Information Commissioner, either
+<p>For å gjøre det enklere å sende inn relevant informasjon til Kongen
+i statsråd eller Sivilombudsmannen, enten
 <% if !@info_request.nil? %>
-    include a link to your request
+    ta med en lenke til din henvendelse
     <strong><%=h request_url(@info_request) %></strong>
 <% else %>
-    include a link to your request on <%= site_name %>
+    ta med en lenke til din henvendelse på <%= site_name %>
 <% end %>
-in your complaint or print out the whole page of your request and all attachments.
+i klagen din eller skriv ut hele henvendelses-siden og alle vedlegg.
 </p>
 
 <p><%= site_name %> har ikke et system for å håndtere slike
