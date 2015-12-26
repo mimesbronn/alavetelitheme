@@ -1,12 +1,13 @@
 <script>
   jQuery('#user_locale_switcher').find('.locale-list-trigger').each(function() {
-    jQuery(this).click(function(){
+  jQuery(this).click(function(){
+      console.log('yoyo');
       jQuery(this).parent().toggleClass('active');
     });
   });
-<!-- Piwik -->
-<script type="text/javascript">
-  var _paq = _paq || [];
+
+  // Should only add in production
+/* var _paq = _paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
   (function() {
@@ -15,7 +16,7 @@
     _paq.push(['setSiteId', 1]);
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
+  })();*/
 </script>
-<noscript><p><img src="//piwik.nuug.no/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+<!--<noscript><p><img src="//piwik.nuug.no/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript> -->
 <!-- End Piwik Code -->

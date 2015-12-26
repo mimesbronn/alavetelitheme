@@ -9,9 +9,12 @@ $color_violet: #a94ca6;
 $color_purple: #5c377f;
 $color_white: #ffffff;
 
-$color_neutral_light: $color_sand;
+$color_banner_bg: #487890;
+$color_page_bg: #F8F8F8;
+
+$color_neutral_light: $color_page_bg;
 $color_neutral_dark: $color_black;
-$color_primary: $color_violet;
+$color_primary: $color_banner_bg;
 $color_secondary: $color_orange;
 
 $body-bg: $color_neutral_light;
@@ -20,6 +23,7 @@ $body-font-color: $color_neutral_dark;
 $link-color: darken($color_blue, 20%);
 $action-color: $color_green;
 $font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+//$font-family: "Arial", sans-serif;
 $form_input-bg: $color_white;
 
 $button-bg: $action-color;
@@ -346,6 +350,7 @@ a.link_button_green_large {
   @include respond-min($main_menu-mobile_menu_cutoff) {
     background-color: transparent;
   }
+  left: 344px;
 }
 
 /* Dropdown list for switching locale */
@@ -883,4 +888,42 @@ dt {
   @include ie8 {
     color: $color_white;
   }
+}
+
+/* Reset the logo, as we dont like image logos */
+.site-title__logo {
+  background-image: unset;
+  overflow-hidden: unset;
+  margin: unset;
+  padding-top: 10px;
+  margin-right: 40px;
+  width: unset;
+  text-indent: unset;
+  background-size: unset;
+  
+  font-size: 2em;
+  font-weight: 400;
+  color: #fff!important;
+  height: 50px;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.8em;
+}
+
+.request_listing .head, .body_listing .head, .user_listing .head {
+  font-size: 1.5em;
+}
+
+.homepage-hero {
+  background-repeat: repeat;
+}
+
+.footer {
+  padding: 5em 0 8em;
+  background-image: url(/assets/homepage-background.jpg);  
 }
