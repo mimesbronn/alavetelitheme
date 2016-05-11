@@ -26,12 +26,12 @@ $font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
 //$font-family: "Arial", sans-serif;
 $form_input-bg: $color_white;
 
-$button-bg: $action-color;
+$button-bg: darken($color_green, 10%);
 $button-color: $color_white;
 
-$status-success: $color_green;
-$status-failure: $color_red;
-$status-pending: $color_orange;
+$status-success: darken($color_green, 18%);
+$status-failure: darken($color_red, 10%);
+$status-pending: darken($color_orange, 28%);
 
 $notice-color: $color_green;
 $error-color: $color_red;
@@ -325,6 +325,10 @@ a.link_button_green_large {
 
 /* Logged and local options act like submenus */
 #logged_in_bar{
+  @include respond-min($main_menu-mobile_menu_cutoff) {
+    top: 0;
+  }
+
   a {
     @extend %menu-item;
     background-color: transparent;
@@ -337,7 +341,6 @@ a.link_button_green_large {
     }
   }
   #logged_in_links {
-    top: 2em;
     a {
       font-weight: normal;
     }
@@ -426,7 +429,7 @@ a.link_button_green_large {
     z-index: 1000;
     border-radius: 3px;
     font-size: 1em;
-    width: 100%;
+    min-width: 100%;
   }
 
 }
