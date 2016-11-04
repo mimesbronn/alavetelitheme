@@ -14,4 +14,24 @@ Rails.configuration.to_prepare do
   #     "If you uncomment this line, this text will appear as default text in every message"
   #   end
   # end
+
+  # Based on alaveteli/app/models/incoming_message.rb, see
+  # https://github.com/mysociety/alaveteli/issues/2662
+  InfoRequest.class_eval do
+    def self.remove_quoted_sections(text, replacement = "FOLDED_QUOTED_SECTION")
+      text = text.dup
+      replacement = "\n" + replacement + "\n"
+
+      # To end of message sections
+      original_message =
+        '(' +
+        # Used in https://www.mimesbronn.no/request/innsyn_i_arkivplan
+        '''----*\s*Opprinnelig melding\s*----*''' +
+        ')'
+      # Could have a ^ at start here, but see messed up formatting here:
+      # http://www.whatdotheyknow.com/request/refuse_and_recycling_collection#incoming-842
+      text.gsub!(/(#{original_message}\n.*)$/mi, replacement)
+      return text
+    end
+  end
 end
