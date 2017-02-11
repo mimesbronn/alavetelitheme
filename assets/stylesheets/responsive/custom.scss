@@ -978,7 +978,12 @@ h2 {
   background-image: url(/assets/homepage-background.jpg);
 }
 
+/* logged in menu */
 .js-loaded .navigation .logged-in-menu {
   width: auto;
-  background-color: $color_primary;
+  background-color: darken($color_primary, 10%);
+}
+
+.dashboard-profile__name, .dashboard-profile__email {
+  color: #ccc;
 }
