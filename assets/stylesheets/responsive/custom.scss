@@ -977,3 +977,8 @@ h2 {
   padding: 5em 0 8em;
   background-image: url(/assets/homepage-background.jpg);
 }
+
+.js-loaded .navigation .logged-in-menu {
+  width: auto;
+  background-color: $color_primary;
+}
