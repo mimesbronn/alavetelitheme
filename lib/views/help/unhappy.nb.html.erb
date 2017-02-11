@@ -1,7 +1,7 @@
 <% @title = "Misfornøyd med innsynsforespørselen?" %>
 
 
-<% if !@info_request.nil? %>
+<% if @info_request %>
 <h1>Misfornøyd med svaret du fikk
 på henvendelsen '<%=request_link(@info_request) %>'?
 </h1>
@@ -27,8 +27,8 @@ på henvendelsen '<%=request_link(@info_request) %>'?
 <h1 id="internal_review">1. Klage på svaret <a class="hover_a" href="#internal_review">#</a> </h1>
 
 <p>
-<% if !@info_request.nil? %>
-    <%= link_to "Klag på svaret", show_response_no_followup_path(:id => @info_request.id, :incoming_message_id => nil) + "?internal_review=1#followup", :class => 'link_button_green' %> og skriv en melding om hva du klager på.
+  <% if @info_request %>
+    <%= link_to "Klag på svaret, new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> og skriv en melding om hva du klager på.
 <% else %>
   Velg "Klag på svaret" nederst på henvendelsessiden på <%= site_name %>,
   og skriv en melding hvor du sier at du klager og hva det er du
@@ -63,7 +63,7 @@ Kongen i statsråd.  </p>
 
 <p>For å gjøre det enklere å sende inn relevant informasjon til Kongen
 i statsråd eller Sivilombudsmannen, enten
-<% if !@info_request.nil? %>
+<% if @info_request %>
     ta med en lenke til din henvendelse
     <strong><%=h request_url(@info_request) %></strong>
 <% else %>
