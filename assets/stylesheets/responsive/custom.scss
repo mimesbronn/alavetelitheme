@@ -211,6 +211,28 @@ a.link_button_green_large {
   @include button-primary($size: large);
 }
 
+
+/* Action Bar Mixins */
+
+@mixin follow-button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-bottom: 0;
+}
+
+@mixin follower-count {
+  color: $color_dark_grey;
+  padding: 0.56em 1.25em;
+  border: 1px solid $color_light_grey;
+  position: relative;
+  left: -3px;
+  line-height: 1.6em;
+  border-left: 0;
+  border-radius: 3px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /* Popups */
 
 .popup {
@@ -596,6 +618,27 @@ a.link_button_green_large {
 }
 
 /* Request page */
+.request-header__action-bar__actions {
+  .action-menu__button {
+    @include button-secondary();
+    &:after {
+      border-color: #a5a5a5 transparent transparent transparent;
+      right: 7%;
+    }
+  }
+
+  .action-bar__follow-button {
+    .track__action {
+      @include button-primary();
+      @include follow-button();
+    }
+  }
+
+  .action-bar__follower-count {
+    @include follower-count();
+  }
+}
+
 div.correspondence {
   background-color: $color_white;
   box-shadow: 0 2px 2px transparentize($color_black, 0.8);
@@ -606,7 +649,7 @@ div.correspondence {
 
 .incoming.correspondence {
   border-top: 8px solid $color_secondary;
-  a {
+  .correspondence_text a {
     color: $color_secondary;
   }
   a.link_to_this {
@@ -619,6 +662,11 @@ div.correspondence {
   a.link_to_this {
     background-color: $color_primary;
   }
+}
+
+a.correspondence__header__date,
+a.correspondence__header__date:visited {
+  color: #777;
 }
 
 .describe_state_form input[type="radio"] + label {
@@ -663,6 +711,14 @@ a.link_to_this {
   }
 }
 
+.sidebar {
+  .new-request-cta {
+    .new-request__make-new-requests {
+      @include button-primary();
+    }
+  }
+}
+
 .feed_link_sidebar .link_button_green {
   @include button-primary();
 }
@@ -699,6 +755,10 @@ a.link_to_this {
 .icon_successful,
 .icon_partially_successful {
   color: $status-success;
+}
+
+.request-status-message {
+  color: $color_black;
 }
 
 /* Attachments*/
@@ -819,14 +879,17 @@ dt {
 }
 
 /* Authority page */
-.action-bar__follower-count {
-  padding: 3px;
-  font-size: 1.1rem;
-}
+.authority__header__action-bar {
+  .action-bar__follow-button {
+    .track_action,
+    .link_button_green {
+      @include button-secondary();
+      @include follow-button();
+    }
+  }
 
-.action-bar__follow-button {
-  .link_button_green {
-    @include button-secondary();
+  .action-bar__follower-count {
+    @include follower-count();
   }
 }
 
@@ -857,6 +920,29 @@ dt {
     }
   }
 
+  .intro__title {
+    color: $color_white;
+    text-shadow: 0 1px 2px transparentize($color_black, 0.7);
+  }
+
+  .new-request__content {
+    background-color: $color_neutral_dark;
+    border-radius: 5px;
+    padding: 1.888888889em;
+  }
+
+  .new-request__title {
+    color: $color_white;
+    font-size: 1.4375em;
+    margin: 0 0 0.5em;
+  }
+
+  .new-request__description {
+    color: transparentize($color_white, 0.2);
+    @include ie8 {
+      color: $color_white;
+    }
+  }
   .new-request__make-new-requests {
     @include button-base;
     background-color: desaturate(darken($color_secondary, 10%), 5%);
