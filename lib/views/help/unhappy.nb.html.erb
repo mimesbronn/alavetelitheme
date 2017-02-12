@@ -28,7 +28,7 @@ på henvendelsen '<%=request_link(@info_request) %>'?
 
 <p>
   <% if @info_request %>
-    <%= link_to "Klag på svaret, new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> og skriv en melding om hva du klager på.
+    <%= link_to "Klag på svaret", new_request_followup_path(:request_id => @info_request.id) + "?internal_review=1#followup", :class => 'link_button_green request-internal-review-action' %> og skriv en melding om hva du klager på.
 <% else %>
   Velg "Klag på svaret" nederst på henvendelsessiden på <%= site_name %>,
   og skriv en melding hvor du sier at du klager og hva det er du
