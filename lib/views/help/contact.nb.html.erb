@@ -66,7 +66,7 @@
 
     <% if !@last_request.nil? %>
         <p>
-            <label class="form_label" for="contact_message">Inkluder lenke til henvendelse:/label>
+            <label class="form_label" for="contact_message">Inkluder lenke til henvendelse:</label>
             <%=request_link(@last_request) %>
             <%= submit_tag "remove", :name => 'fjern' %>
         </p>
